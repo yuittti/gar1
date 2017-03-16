@@ -1,6 +1,13 @@
 .pageIndex1 {
 	position: relative;
 
+	.page-wrapper {
+		height: 100%;
+		min-height: 500px;
+	}
+
+
+
 	.page-header {
 		position: absolute;
 		top: 0;
@@ -16,6 +23,20 @@
 		@include media-min(1500) {
 			padding-left: 2.5%;
 			padding-right: 2.5%;
+		}
+
+		@include media(1200) {
+			height: 100px;
+			padding-top: 17px;
+			padding-bottom: 17px;
+
+			.c-hamburger {
+				display: block;
+			}
+		}
+
+		@include media(767) {
+			height: 80px;
 		}
 
 
@@ -35,6 +56,11 @@
 			@include media-min(1600) {
 				width: 305px;
 			}
+
+			@include media(1200) {
+				width: 180px;
+			    height: 45px;
+			}
 			span {
 				color: white;
 				font-family: $font-logo1;
@@ -44,6 +70,10 @@
 				@include media-min(1600) {
 					font-size: 41px;
 				}
+
+				@include media(1200) {
+					font-size: 24px;
+				}
 			}
 
 
@@ -51,6 +81,10 @@
 
 		.logo-label {
 			margin-top: 8px;
+
+			@include media(1200) {
+				margin-top: 4px;
+			}
 			span {
 				color: #ffffff;
 				line-height: 15px;
@@ -62,6 +96,11 @@
 
 				@include media-min(1600) {
 					letter-spacing: 4.5px;
+				}
+
+				@include media(1200) {
+					font-size: 12px;
+					letter-spacing: 0;
 				}
 			}
 			
@@ -77,6 +116,12 @@
 
 				&-top {
 					margin-bottom: 22px;
+					@include media(1200) {
+						margin-bottom: 0;
+					}
+					@include media(1023) {
+						display: none;
+					}
 					.label {
 						color: #ffffff;
 						font-family: $font-spec;
@@ -87,6 +132,13 @@
 						margin-left: 27px;
 						margin-right: 27px;
 						position: relative;
+
+						@include media(1200) {
+							margin-left: 17px;
+							margin-right: 17px;
+							font-size: 15px;
+
+						}
 
 						&:after {
 							display: block;
@@ -115,6 +167,13 @@
 				&-bottom {
 					.menu {
 						@extend .flex;
+
+						@include media(1200) {
+							position: absolute;
+						    flex-direction: column;
+						    right: 0;
+						    display: none;
+						}
 						li {
 							position: relative;
 							padding-left: 12px;
@@ -183,6 +242,10 @@
 				display: flex;
 				justify-content: flex-end;
 				align-items: center;
+
+				@include media(640) {
+					display: none;
+				}
 
 				.soc-item {
 					width: 40px;
@@ -257,15 +320,23 @@
 		@extend .flex;
 		align-items: stretch;
 		z-index: 1;
+		height: 100%;
+		min-height: 500px;
 	}
 
 	.intro {
 		width: 100%;
 		position: relative;
+		height: 100%;
+		min-height: 500px;
 
 		&-slider, &-item {
 			width: 100%;
 			height: 100%;
+
+			@include hmedia(500) {
+				min-height: 500px;
+			}
 		}
 
 		&-item {
@@ -278,6 +349,15 @@
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
+
+			@include media(767) {
+				align-items: center;
+			}
+
+			@include hmedia(500) {
+				// height: auto;
+				min-height: 500px;
+			}
 
 			&:before {
 				content: "";
@@ -297,12 +377,38 @@
 				bottom: 258px;
 				z-index: 5;
 
+				@include media(1023) {
+					bottom: auto;
+				    top: 50%;
+				    transform: translatey(-50%);
+				}
+
+				@include media(767) {
+					// position: static;
+					// margin-top: 20px;
+					// margin-bottom: 20px;
+					left: 0;
+				}
+
 				.logo-caption {
 					font-size: 65px;
 					line-height: 80px;
 					color: white;
 					text-align: left;
 					margin-bottom: 32px;
+					@include media(1023) {
+					    font-size: 55px;
+					    line-height: 60px;
+					}
+					@include media(767) {
+					    font-size: 45px;
+					    line-height: 50px;
+					}
+					@include media(640) {
+					    font-size: 35px;
+					    line-height: 40px;
+					    margin-bottom: 15px;
+					}
 				}
 
 				.btn {
@@ -313,6 +419,10 @@
 					font-size: 15px;
 					text-transform: uppercase;
 					color: white;
+
+					@include media(640) {
+						height: 50px;
+					}
 
 					&:before {
 						// background-color: white;
@@ -350,6 +460,10 @@
 		    padding-bottom: 17px;
 		    background: rgba(0,0,0,0.1);
 
+		    @include media(767) {
+		    	display: none;
+		    }
+
 			&-item {
 				width: 15.62% !important;
 				height: 97px;
@@ -360,6 +474,8 @@
 				background-repeat: no-repeat;
 				outline: none;
 				outline-color: transparent;
+
+
 
 				&:before {
 					content: "";
@@ -393,6 +509,10 @@
 
 		.slick-list {
 			height: 100%;
+
+			@include hmedia(500) {
+				height: 500px;
+			}
 		}
 
 		.slick-track {

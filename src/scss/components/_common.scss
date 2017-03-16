@@ -279,6 +279,13 @@
       width: 70px;
       height: 70px;
     }
+    @include media (767) {
+      display: block !important;
+      top: auto;
+   
+      bottom: 20%;
+      transform: translatey(100%);
+    }
     
 
   &:before {
