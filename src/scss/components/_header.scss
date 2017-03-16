@@ -1,0 +1,156 @@
+.header {
+
+  &-top {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  &-right {
+    @extend .flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-item {
+      padding-left: 60px;
+
+      @include media(1140) {
+        padding-left: 30px;
+      }
+
+      @include media(1023) {
+        &.header-hours {
+          display: none;
+        }
+        &.header-email {
+          display: none;
+        }
+      }
+
+      @include media(767) {
+        & .btn {
+          height: 40px;
+          width: 145px;
+        }
+        
+        &.header-phone {
+          display: none;
+        }
+      }
+
+      @include media(420) {
+        & .btn {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(1) {
+        padding-left: 0;
+      }
+
+      .label {
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  &-bottom {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+
+    @include media(1023) {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 82px;
+      background: white;
+      z-index: 31;
+      width: 200px;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    &-right {
+      width: 110px;
+
+    }
+  }
+
+  &-search {
+    display: none;
+    flex-grow: 1;
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-input {
+      flex-grow: 1;
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  
+}
+
+.header-logo {
+  align-self: flex-start;
+
+  .lux-logo {
+    width: 220px;
+    height: 55px;
+    border: 3px solid #1664af;
+    // padding: 14px;
+    @extend .flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4px;
+    @include media-min(1600) {
+      width: 305px;
+    }
+    span, a {
+      font-family: $font-logo1;
+      font-size: 31px;
+      text-transform: uppercase;
+      color: $black;
+      text-decoration: none;
+
+      @include media-min(1600) {
+        font-size: 41px;
+      }
+    }
+
+
+  }
+
+  .logo-label {
+    margin-top: 8px;
+    span, a {
+      color: $black;
+      line-height: 15px;
+      text-transform: uppercase;
+      font-family: $font-spec;
+      font-weight: 300;
+      letter-spacing: 1px;
+      padding-left: 1px;
+      text-decoration: none;
+
+      @include media-min(1600) {
+        letter-spacing: 4.5px;
+      }
+    }
+    
+  }
+}
+

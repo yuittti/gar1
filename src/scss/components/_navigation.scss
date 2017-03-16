@@ -1,0 +1,52 @@
+.navigation {
+	flex-grow: 1;
+
+	@include media(1023) {
+	    width: 100%;
+	}
+}
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	@extend .flex;
+	justify-content: space-between;
+	@include media(1023) {
+		flex-direction: column;
+		width: 100%;
+	    
+	}
+
+	&-item {
+		font-family: $font-med;
+		font-size: 13px;
+
+		@include media(1023) {
+			width: 100%;
+		   
+		    font-size: 14px;
+		    line-height: 2em;
+		}
+
+		& > a {
+			color: $black;
+			text-decoration: none;
+			transition: 0.15s linear;
+
+			&:hover, &:active, &:focus {
+				color: $blue;
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+
+.current-menu-item {
+	& > a {
+		cursor: default;
+		color: $blue;
+		border-bottom: 1px solid $blue;
+		pointer-events: none;
+	}
+}

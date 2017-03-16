@@ -1,0 +1,366 @@
+.btn {
+  width: 200px;
+  height: 60px;
+  font-family: $font-bold;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #fffefe;
+  background: $blue;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &-animated {
+    overflow: hidden;
+    position: relative;
+    transition: 0.1s linear;
+
+    &:before {
+      content: "";
+      display: block;
+      position:absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #156e9e;
+      width:100%;
+      height:100%;
+      transition: 0.1s linear;
+      z-index: 1;
+      transform: scalex(0);
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      z-index: 3;
+      background: $blue;
+      transform: translatey(-60px);
+    }
+
+    & > span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:hover, &:active, &:focus {
+      // transition: 0.3s linear;
+      // background: #4891b9;
+      
+      &:before {
+        transform: scalex(1);
+        transition: 0.2s linear;
+      }
+
+      &:after {
+        transform: translatey(0);
+        transition: 0.2s 0.2s ease;
+      }
+    }
+  }
+
+  &-invert {
+    border: 2px solid white;
+    background: transparent;
+    font-family: $font-reg;
+    font-size: 15px;
+  }
+
+  &-header {
+    width: 156px;
+    height: 45px;
+    background: transparent;
+    color: $black;
+    border: 2px solid $blue;
+    transition: 0.1s linear;
+
+    & > span {
+      padding-bottom: 2px;
+    }
+
+    &:hover, &:active, &:focus {
+      border: none;    
+      // background: $blue;
+      color: #fffefe;
+    }
+  }
+
+  &-search {
+    opacity: 0.1;
+    transition: 0.15s linear;
+
+    &:hover, &:active, &:focus {
+      opacity: 0.5;
+    }
+  }
+}
+
+.logo {
+  width: 300px;
+
+  @include media(767) {
+    width: 130px;
+  }
+  @extend .flex;
+  
+
+  &-img {
+    margin-right: 20px;
+
+    @include media(767) {
+      margin-right: 5px;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &-txt {
+    @extend .flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+}
+
+.order {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .section-title {
+    font-size: 31px;
+    line-height: 34px;
+
+     @include media(640) {
+         font-size: 25px;
+    line-height: 29px;
+        }
+  }
+  .form-error {
+    font-family: $font-med;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    position: absolute;
+    display: none;
+    // bottom: -1.65em;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    color: red;
+  }
+  &-formBlock {
+    width: 880px;
+    max-width: 100%;
+    padding: 45px 80px;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+  }
+  &-formTitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &-form {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include media(940) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      box-shadow: none;
+
+      &:not([type=submit]) {
+        background: #fafafa;
+        font-family: $font-light;
+        font-size: 13px;
+        line-height: 46px;
+        color: $black;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid #dddddd;
+      }
+
+      &::-webkit-input-placeholder { 
+        color: $black;
+      }
+
+      &::-moz-placeholder { 
+        color: $black;
+      }
+
+      &:-ms-input-placeholder { 
+        color: $black;
+      }
+
+      &:-moz-placeholder { 
+        color: $black;
+      }
+
+      &.-error {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+
+  .form {
+    &-input {
+      width: 240px;
+
+       @include media(940) {
+          margin-bottom: 20px;
+        }
+
+      label {
+        font-family: $font-light;
+        font-size: 11px;
+        color: $gray;
+        margin-bottom: 3px;
+        display: block; 
+      }
+
+      &-submit {
+        width: 200px;
+
+        @include media(940) {
+          width: 240px;
+        }
+
+        .btn {
+          outline: none;
+          width: 100%;
+          height: 50px;
+          border: none;
+          box-shadow: 0 5px 20px 0 rgba(56,111,197,0.3);
+
+          &:hover, &:focus, &:active {
+            box-shadow: none;
+            transition: 0.2s linear box-shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  background-color: rgba(0,0,0,0.2);
+  top: 50%;
+  transform: translatey(-50%);
+  border: 0;
+  box-shadow: none;
+  text-indent: -9999px;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+  outline: none;
+  outline-color: transparent;
+  display: none !important;
+
+    @include media-min(1350) {
+      display: block !important;
+    }
+    @include media-min(1500) {
+      width: 70px;
+      height: 70px;
+    }
+    
+
+  &:before {
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  &.slick-next {
+    right: 12px;
+    @include media-min(1500) {
+      right: 2.5%;
+    }
+    &:before {
+      content: "";
+      display: block;
+      background: url(../images/arrow.png) center center no-repeat;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+        transition: 0.2s linear;
+      }
+    }
+  }
+
+  &.slick-prev {
+    left: 12px;
+     @include media-min(1500) {
+      left: 2.5%;
+    }
+    &:before {
+      content: "";
+      display: block;
+      background: url(../images/arrow.png) center center no-repeat;
+      transform: rotate(180deg);
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+        transition: 0.2s linear;
+      }
+    }
+  }
+}
+
+.nav-dots {
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  .owl-dots {
+    text-align: left;
+    bottom: 50px;
+    position: absolute;
+    z-index: 99;
+
+    @include media(640) {
+      bottom: 35px;
+    left: 1px;
+    }
+
+    .owl-dot {
+      cursor: pointer;
+
+      span {
+        width: 13px;
+        height: 13px;
+        background: #4a566e;
+        margin: 0 20px 0 0;
+        border-radius: 0;
+      }
+      
+
+      &.active, &:hover {
+        span {
+          background: $blue;
+        }
+        
+      }
+    }
+  }
+}
+
