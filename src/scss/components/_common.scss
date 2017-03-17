@@ -136,10 +136,20 @@
     font-size: 31px;
     line-height: 34px;
 
-     @include media(640) {
+     @include media(940) {
          font-size: 25px;
     line-height: 29px;
         }
+     @include media(543) {
+        font-size: 23px;
+    line-height: 25px;
+
+    br {
+      display: none;
+    }
+        }
+
+    
   }
   .form-error {
     font-family: $font-med;
@@ -161,6 +171,10 @@
     margin: 0 auto;
     background: white;
     position: relative;
+
+        @include media(767) {
+          padding: 45px 20px;
+        }
   }
   &-formTitle {
     text-align: center;
@@ -371,3 +385,40 @@
   }
 }
 
+.c-hamburger-container  {
+
+  @include media(1200) {
+    display: none;
+}
+  & > .menu {
+
+  // display: block;
+
+  @include media(1200) {
+
+      
+      position: absolute;
+      right: 0;
+      top: 82px;
+      background-color: rgba(4, 3, 5, 0.71);
+      border-top: 1px solid #e0dddd;
+      z-index: 31;
+      width: 100%;
+      
+      flex-direction: column;
+      padding: 20px;
+      top: 100px;
+      box-shadow: 1px 4px 8px rgba(0,0,0,0.24);
+}
+
+li {
+  @include media(1200) {
+    padding: 10px;padding-right: 0;
+    &:after {
+      display: none;
+    }
+  }
+}
+}
+ 
+ }

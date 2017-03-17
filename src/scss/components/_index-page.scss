@@ -172,7 +172,7 @@
 							position: absolute;
 						    flex-direction: column;
 						    right: 0;
-						    display: none;
+						    // display: none;
 						}
 						li {
 							position: relative;
@@ -202,6 +202,10 @@
 								position: absolute;
 								right: -4px;
 								top: 1px;
+
+								@include media(1200) {
+									display: none;
+								}
 							}
 						}
 

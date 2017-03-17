@@ -20,13 +20,19 @@
 	&-item {
 		font-family: $font-med;
 		font-size: 13px;
+		text-align: right;
 
 		@include media(1023) {
 			width: 100%;
 		   
 		    font-size: 14px;
 		    line-height: 2em;
+
+		    text-transform: uppercase;
+		    letter-spacing: 0.5px;
+		    font-weight: 700;
 		}
+
 
 		& > a {
 			color: $black;

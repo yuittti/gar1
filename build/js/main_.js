@@ -6,7 +6,6 @@
 	
 	$(document).ready(function(){
 
-		
 		$('.intro-slider').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -42,36 +41,6 @@
 			// startPosition: imgInd
 			//autoWidth:true
 		});
-
-		$('.c-hamburger').on('click', function(ev) {
-			toggleMenu(ev, $(this), $('.c-hamburger-container'));
-		});
-
-		function toggleMenu(ev, el, container) {
-			el.toggleClass('is-active');
-			container.slideToggle();
-		};
-
-		// 	self.link = el.querySelector('.dropDown-link');
-		// self.content = el.querySelector('.dropDown-content');
-		// self.closeAll = function(e){
-		// 	//e.preventDefault();
-		// 	if ($(e.target).closest('.dropDown')[0] != el) {
-		// 		el.classList.remove('-open');
-		// 	}
-		// };
-		// self.link.addEventListener('click', function(e) {
-		// 	e.preventDefault();
-		// 	if (el.classList.contains('-open')) {
-		// 		el.classList.remove('-open');
-		// 	} else {
-		// 		el.classList.add('-open');
-		// 	}
-		// });
-		// document.addEventListener('click', self.closeAll);
-		// document.addEventListener('touchstart', self.closeAll);
-
-		// })
 
 		// Modal
 		// -------

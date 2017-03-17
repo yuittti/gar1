@@ -18,6 +18,15 @@
   color: white;
   margin-bottom: 50px;
 
+  @include media(767) {
+    font-size: 35px;
+    margin-bottom: 0;
+  }
+  @include media(480) {
+    font-size: 28px;
+   
+  }
+
 }
 
 .section-title {
