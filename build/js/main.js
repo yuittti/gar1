@@ -6,26 +6,30 @@
 	
 	$(document).ready(function(){
 
-		
-		$('.intro-slider').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: true,
-			nextArrow: '<button type="button" class="slick-next"></button>',
-			prevArrow: '<button type="button" class="slick-prev"></button>',
-			// fade: true,
-			asNavFor: '.intro-slider-nav'
-		});
+		if ($('.intro-slider') && $('.intro-slider').length) {
+			
+			$('.intro-slider').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: true,
+				nextArrow: '<button type="button" class="slick-next"></button>',
+				prevArrow: '<button type="button" class="slick-prev"></button>',
+				// fade: true,
+				asNavFor: '.intro-slider-nav'
+			});
 
-		$('.intro-slider-nav').slick({
-			slidesToShow: 6,
-			slidesToScroll: 1,
-			asNavFor: '.intro-slider',
-			arrows: false,
-			dots: true,
-			// centerMode: true,
-			focusOnSelect: true
-		});
+			$('.intro-slider-nav').slick({
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				asNavFor: '.intro-slider',
+				arrows: false,
+				dots: true,
+				// centerMode: true,
+				focusOnSelect: true
+			});
+		}
+
+		
 
 		$('.owl-carousel').owlCarousel({
 			nav: false,
@@ -48,8 +52,9 @@
 		});
 
 		function toggleMenu(ev, el, container) {
+			$('body').toggleClass('menu-opened');
 			el.toggleClass('is-active');
-			container.slideToggle();
+			// container.slideToggle();
 		};
 
 		// 	self.link = el.querySelector('.dropDown-link');

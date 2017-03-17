@@ -1,7 +1,7 @@
 .navigation {
 	flex-grow: 1;
 
-	@include media(1023) {
+	@include media(1200) {
 	    width: 100%;
 	}
 }
@@ -11,7 +11,7 @@
 	margin: 0;
 	@extend .flex;
 	justify-content: space-between;
-	@include media(1023) {
+	@include media(1200) {
 		flex-direction: column;
 		width: 100%;
 	    
@@ -22,7 +22,7 @@
 		font-size: 13px;
 		text-align: right;
 
-		@include media(1023) {
+		@include media(1200) {
 			width: 100%;
 		   
 		    font-size: 14px;

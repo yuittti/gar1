@@ -40,6 +40,10 @@
       top: 0;
       transform: skewX(-20deg);
       z-index: 1;
+
+      @include media(640) {
+        display: none;
+      }
     }
 
     &:after {
@@ -72,8 +76,9 @@
 
     @include media(640) {
       padding-top: 40px;
-    padding-bottom: 10px;
-    position: static;
+      padding-bottom: 10px;
+      position: static;
+      text-align: center;
     }
   }
 
@@ -87,6 +92,7 @@
       font-size: 35px;
       max-height: 105px;
       overflow: hidden;
+      text-align: center;
     }
 
   }
@@ -106,6 +112,7 @@
 
   .btn {
     margin-bottom: 80px;
+    
   }
 }
 

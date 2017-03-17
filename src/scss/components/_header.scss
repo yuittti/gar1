@@ -68,11 +68,9 @@
 
 
 
-    @include media(1023) {
-      display: none;
+    @include media(1200) {
       position: absolute;
       right: 0;
-      top: 82px;
       background: rgb(236, 236, 236);
       border-top: 1px solid #e0dddd;
       z-index: 31;
@@ -80,9 +78,13 @@
       
       flex-direction: column;
       padding: 20px;
-      top: 100px;
+      top: 82px;
       box-shadow: 1px 4px 8px rgba(0,0,0,0.24);
     }
+
+    // @include media(767) {
+    //   top: 82px;
+    // }
 
     &-right {
       width: 110px;
@@ -151,6 +153,7 @@
     margin-top: 8px;
     @include media(1200) {
         margin-top: 4px;
+        display: none;
       }
     span, a {
       color: $black;
