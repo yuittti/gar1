@@ -7138,14 +7138,6 @@ body {
       @media all and (max-width: 1024px) {
         .services-item-wrap:before {
           display: none; } }
-    .services-item-wrap:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      position: absolute;
-      background: rgba(255, 255, 255, 0.5); }
     .services-item-wrap:hover:before {
       left: 0; }
     .services-item-wrap:hover .item-title {
@@ -7155,6 +7147,8 @@ body {
               transition-delay: .2s color;
       -webkit-transition: 0.1s linear top, 0.1s linear color;
       transition: 0.1s linear top, 0.1s linear color; }
+      .services-item-wrap:hover .item-title:before {
+        background: transparent; }
       @media all and (max-width: 1024px) {
         .services-item-wrap:hover .item-title {
           color: #111;
@@ -7177,7 +7171,16 @@ body {
     transition: 0.1s linear top, 0.3s linear color;
     color: #111;
     -webkit-transition-delay: .2s top;
-            transition-delay: .2s top; }
+            transition-delay: .2s top;
+    position: relative; }
+    .services-item .item-title:before {
+      display: block;
+      left: 30px;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5); }
     @media all and (max-width: 1024px) {
       .services-item .item-title {
         top: 45px; } }
