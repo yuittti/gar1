@@ -104,11 +104,15 @@
     margin-bottom: 20px !important;
   }
 
-  li, p {
+  li, p, pre {
     font-family: $font-reg !important;
     font-size: 13px !important;
     color: $black !important;
     line-height: 20px !important;
+  }
+
+  pre {
+    white-space: pre-line !important;
   }
 
   li {

@@ -22,6 +22,12 @@
       @include media(1140) {
         padding-left: 30px;
       }
+      @include media(767) {
+        padding-left: 12px;
+      }
+      @include media(480) {
+        padding-left: 5px;
+      }
 
       @include media(1023) {
         &.header-hours {
@@ -38,14 +44,19 @@
           width: 145px;
         }
         
-        &.header-phone {
-          display: none;
-        }
+
       }
 
-      @include media(480) {
+      @include media(640) {
         & .btn {
           display: none;
+        }
+
+         &.header-phone {
+          .label {
+            display: none;
+          }
+          
         }
       }
 
@@ -63,8 +74,7 @@
     @extend .flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+   
 
 
 
@@ -128,7 +138,12 @@
 
     @include media(1200) {
         width: 180px;
-          height: 45px;
+        height: 45px;
+      }
+    @include media(480) {
+        width: 90px;
+        border: none;
+        
       }
     span, a {
       font-family: $font-logo1;
@@ -143,7 +158,10 @@
 
       @include media(1200) {
           font-size: 24px;
-        }
+      }
+      @include media(480) {
+          font-size: 20px;
+      }
     }
 
 

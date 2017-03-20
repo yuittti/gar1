@@ -57,6 +57,23 @@
 			// container.slideToggle();
 		};
 
+		// $('.menu > .menu-item-has-children > a').click(function(ev) {
+		// 	ev.preventDefault();
+			
+		// 	$(this)
+		// 		.closest('.menu-item')
+		// 		.toggleClass('submenu-opened');
+
+		// });
+
+		// var elem = document.querySelectorAll('defend-search');
+		// var sLink = document.querySelectorAll('.header-searchLink');
+		// if (elem[0] != event.target
+		//   && !elem[0].contains(event.target)
+		//   && sLink[0] != event.target
+		//   && !sLink[0].contains(event.target)) {
+		// 	self.searchOpened = false;
+
 		// 	self.link = el.querySelector('.dropDown-link');
 		// self.content = el.querySelector('.dropDown-content');
 		// self.closeAll = function(e){
@@ -290,7 +307,7 @@
 		});
 
 		$('.current-menu-item').on('click', function(ev){
-			ev.preventDefault();
+			// ev.preventDefault();
 		});
 
 		if ($('#contactsMap').length) {
