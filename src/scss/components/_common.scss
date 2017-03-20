@@ -433,3 +433,41 @@
     z-index: 999;
   }
 }
+
+.breadcrumbs {
+  margin-top: 25px;
+  font-family: $font-light;
+  font-size: 10px;
+  line-height: 18px;
+
+  a {
+    font-size: 13px;
+    color: $blue;
+    border-bottom: 1px solid $blue;
+
+    &:hover {
+      color: darken($blue, 10%);
+    }
+  }
+
+  span > span {
+    font-size: 13px;
+    color: $black;
+  }
+
+  & > span {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+  }
+
+
+
+}

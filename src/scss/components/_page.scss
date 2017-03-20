@@ -572,6 +572,11 @@
 .singleService {
   padding-top: 25px;
 
+  .breadcrumbs {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
   
     & > .grid-row {
       @include media(991) {

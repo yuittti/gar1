@@ -57,6 +57,11 @@
 			// container.slideToggle();
 		};
 
+		$(".singleService-menu-wrap").stick_in_parent();
+		// $(".page-header").stick_in_parent();
+
+
+
 		// $('.menu > .menu-item-has-children > a').click(function(ev) {
 		// 	ev.preventDefault();
 			
