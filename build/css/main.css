@@ -3839,8 +3839,8 @@ body {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg); }
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -3865,8 +3865,8 @@ body {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg); }
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -7154,8 +7154,9 @@ body {
         background: transparent; }
       @media all and (max-width: 1024px) {
         .services-item-wrap:hover .item-title {
-          color: #111;
-          top: 45px; } }
+          color: white;
+          top: 45px;
+          background: #40a0d4; } }
     .services-item-wrap:hover .item-btn {
       bottom: 120px;
       -webkit-transition-delay: .3s;
@@ -7165,7 +7166,7 @@ body {
           bottom: 45px; } }
   .services-item .item-title {
     position: absolute;
-    top: 45px;
+    top: 70%;
     left: 0;
     right: 0;
     text-align: center;
@@ -7178,7 +7179,7 @@ body {
     position: relative;
     margin-left: 30px;
     margin-right: 30px;
-    background: rgba(70, 175, 232, 0.76);
+    background: #40a0d4;
     color: white; }
     .services-item .item-title:before {
       display: block;
