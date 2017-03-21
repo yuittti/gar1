@@ -3839,8 +3839,8 @@ body {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg); }
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -3865,8 +3865,8 @@ body {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg); }
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -6606,8 +6606,9 @@ body {
         height: 45px; } }
     @media all and (max-width: 480px) {
       .header-logo .lux-logo {
-        width: 90px;
-        border: none; } }
+        width: 100px;
+        padding-left: 5px;
+        padding-top: 0; } }
     .header-logo .lux-logo span, .header-logo .lux-logo a {
       font-family: "Foundry Gridnik";
       font-size: 31px;
@@ -6622,7 +6623,8 @@ body {
           font-size: 24px; } }
       @media all and (max-width: 480px) {
         .header-logo .lux-logo span, .header-logo .lux-logo a {
-          font-size: 20px; } }
+          font-size: 18px;
+          line-height: 18px; } }
   .header-logo .logo-label {
     margin-top: 8px; }
     @media all and (max-width: 1200px) {
@@ -7146,7 +7148,8 @@ body {
       -webkit-transition-delay: .2s color;
               transition-delay: .2s color;
       -webkit-transition: 0.1s linear top, 0.1s linear color;
-      transition: 0.1s linear top, 0.1s linear color; }
+      transition: 0.1s linear top, 0.1s linear color;
+      background: transparent; }
       .services-item-wrap:hover .item-title:before {
         background: transparent; }
       @media all and (max-width: 1024px) {
@@ -7172,7 +7175,11 @@ body {
     color: #111;
     -webkit-transition-delay: .2s top;
             transition-delay: .2s top;
-    position: relative; }
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    background: rgba(70, 175, 232, 0.76);
+    color: white; }
     .services-item .item-title:before {
       display: block;
       left: 30px;

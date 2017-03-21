@@ -360,6 +360,7 @@
           color: white;
           transition-delay: .2s color;
           transition: 0.1s linear top, 0.1s linear color;
+          background: transparent;
           &:before {
             background: transparent;
           }
@@ -392,6 +393,10 @@
       color: #111;
       transition-delay: .2s top;
       position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+      background: rgba(70, 175, 232, 0.76);
+      color: white;
       
       &:before {
         // content: "";

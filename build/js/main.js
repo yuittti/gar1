@@ -256,7 +256,61 @@
 	    	}
 	    	
 	    	return false;
-	    })
+	    });
+
+	    $('#galleryContent').on('click', '.gallery-item-link', function(ev){
+	    	ev.preventDefault();
+	    	if ($(this).length) {
+	    		var postId = $(this).data('postId');
+	    		console.log(postId);
+	    		showGallery(postId);
+	    	}
+	    });
+
+	    function showGallery(id) {
+	    	$.ajax({
+	    		type: "POST",
+				dataType: "html",
+				url: ajaxData.url,
+				data: {
+					action: 'get_post_images',
+					postId: id
+				},
+				beforeSend: function() {
+	            	// $('#loaderGal').show();
+	            	// $('#galleryContent').html('');
+	            },
+				success: function(data){
+					console.log(data);
+					// return;
+					var $data = $(data);
+					if($data.length){
+
+						//$("#ajax-posts").append($data);
+						//$("#more_posts").attr("disabled",false);
+						// setTimeout(function(){
+						// 	$('#loaderGal').hide();
+						// 	$('#galleryContent').html($data);
+						// }, 1000);
+						
+
+
+						// setTimeout(function(){
+						// 	$loader.before($data);
+						// 	$('body, html').animate({ scrollTop: ($(document).scrollTop() + 300) }, 800);
+						// }, 150);
+
+					} else {
+						// $("#more_posts").attr("disabled",true);
+						// $loader.hide();
+					}
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					// $loader.html(jqXHR + " :: " + textStatus + " :: " + errorThrown);
+				}
+	    	});
+	    	return false;
+	    };
 
 		// filter cars in gallery
 		function filterGallery(subcat) {
